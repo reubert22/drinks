@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import { listByAlcoholic } from "../containers/cocktail/service.ts";
 import Link from "next/link";
+import { listByAlcoholic } from "../containers/cocktail/service.ts";
+import styles from "../styles/Home.module.scss";
 
 export default function Home() {
   const [isAlcoholic, setIsAlcoholic] = useState(true);

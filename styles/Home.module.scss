@@ -1,0 +1,24 @@
+@import "../styles/variables.scss";
+
+.container {
+  min-height: 100vh;
+  width: 100vw;
+
+  .container_cocktail {
+    display: inline-flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 30px;
+
+    .cocktail {
+      border: 1px solid $black;
+      padding: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 33%;
+    }
+  }
+}

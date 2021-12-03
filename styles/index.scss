@@ -14,3 +14,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@font-face {
+  font-display: swap;
+  font-family: "NunitoRegular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Nunito/Nunito-Regular.ttf");
+}
