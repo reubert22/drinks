@@ -7,25 +7,86 @@
     .cocktail_img {
       border-bottom-left-radius: 45px;
       border-bottom-right-radius: 45px;
-      margin-bottom: 30px;
       box-shadow: 0px 1px 10px $background-shadow;
+      margin-bottom: 30px;
     }
 
     .cocktail_info {
+      background-color: $light-pink;
       border-top-left-radius: 45px;
       border-top-right-radius: 45px;
-      background-color: $light-pink;
+      box-shadow: 0px 1px 10px $light-pink-shadow;
       display: flex;
       flex-direction: column;
-      box-shadow: 0px 1px 10px $light-pink-shadow;
-      padding: 0 10px;
       padding-top: 10px;
+      padding: 0 10px;
 
       .strDrink {
-        font-size: 2.5rem;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
         font-family: $NunitoRegular;
-
+        font-size: 2.5rem;
+        letter-spacing: 0.5px;
+        overflow: hidden;
         text-align: center;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+      }
+
+      .alcoholic_flag {
+        font-family: $NunitoRegular;
+        font-size: 1rem;
+        font-style: italic;
+        letter-spacing: 1px;
+        line-height: 15px;
+        text-align: center;
+        text-decoration: underline;
+      }
+
+      .last_section {
+        margin-top: 30px;
+
+        .instructions,
+        .category,
+        .glass {
+          color: #6e686b;
+          font-family: $NunitoRegular;
+          letter-spacing: 0.7px;
+          text-align: right;
+        }
+
+        .category,
+        .glass {
+          line-height: 35px;
+          text-decoration: underline;
+        }
+
+        .instructions {
+          line-height: 20px;
+        }
+
+        .button {
+          background-color: transparent;
+          width: 50px;
+          border: 1.5px solid #6e686b;
+          border-radius: 10px;
+          outline: none;
+          padding: 10px;
+          position: relative;
+          bottom: 0px;
+          left: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .arrow {
+            font-size: 40px;
+            background-color: red;
+            padding: 0;
+            line-height: 0px;
+          }
+        }
       }
     }
   }
