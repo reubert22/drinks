@@ -17,14 +17,20 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <div>
-        Filter cocktails by
-        <button onClick={() => setIsAlcoholic(true)} disabled={isAlcoholic}>
-          Alcoholic
-        </button>
-        <button onClick={() => setIsAlcoholic(false)} disabled={!isAlcoholic}>
-          Non Alcoholic
-        </button>
+      <div className={styles.top_header}>
+        <div className={styles.container_menu_search}></div>
+        <div className={styles.container_title}>
+          <span className={styles.first_title}>Drinks</span>
+          <span className={styles.second_title}>Information</span>
+        </div>
+        <div className={styles.container_filters}>
+          <button onClick={() => setIsAlcoholic(true)} disabled={isAlcoholic}>
+            Alcoholic
+          </button>
+          <button onClick={() => setIsAlcoholic(false)} disabled={!isAlcoholic}>
+            Non Alcoholic
+          </button>
+        </div>
       </div>
       <div className={styles.container_cocktail}>
         {cocktails.map((cocktail) => (

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import { Ingredients } from "../../../components/Details/Ingredients/Ingredients.tsx";
 import { listDetails } from "../../../containers/cocktail/service.ts";
 import styles from "../../../styles/Details.module.scss";
-import { Ingredients } from "../../../components/Details/Ingredients/Ingredients.tsx";
 
 const DetailsFirstSection = ({ label, info, className }) => (
   <div className={styles[className]}>
@@ -27,14 +27,6 @@ const Details = () => {
     };
     if (id) getDetails();
   }, [id]);
-
-  const handleScroll = () => {
-    document.getElementById("details-ingredients").scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-      inline: "center",
-    });
-  };
 
   return (
     <div className={styles.container}>
@@ -86,9 +78,6 @@ const Details = () => {
                   className="glass"
                 />
               )}
-              {/* <button onClick={handleScroll} className={styles.button}>
-                <span className={styles.arrow}>ꜜ</span>
-              </button> */}
             </div>
 
             <Ingredients cocktail={cocktail} />

@@ -1,5 +1,5 @@
 export const Ingredients = ({ cocktail }) => (
-  <div id="details-ingredients">
+  <div>
     <h1>Ingredients</h1>
     {Array(15)
       .fill("")
