@@ -12,14 +12,41 @@
     margin-bottom: 30px;
 
     .container_menu_search {
+      align-items: center;
+      display: flex;
       height: 30%;
+      justify-content: space-between;
       padding: 15px;
-      position: relative;
 
-      .divisor {
-        height: 1px;
-        align-self: center;
+      .icon {
+        height: 30px;
+        width: 30px;
       }
+
+      .left_icons {
+        align-items: center;
+        display: flex;
+
+        .search {
+          margin-right: 10px;
+        }
+
+        .search,
+        .menu {
+          background-color: $background;
+          height: 50px;
+          width: 50px;
+        }
+      }
+    }
+
+    .divisor {
+      align-self: center;
+      background-color: #adaaaa;
+      bottom: 0;
+      height: 1px;
+      margin: 0 15px;
+      position: relative;
     }
 
     .container_title {
@@ -73,6 +100,12 @@
     }
   }
 
+  .container_loading {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
   .container_cocktail::-webkit-scrollbar {
     display: none;
   }
@@ -89,6 +122,38 @@
 
     .flex {
       display: flex;
+
+      .more {
+        align-items: center;
+        background-color: $white;
+        border-radius: 45px;
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+        justify-content: center;
+        margin: 5px;
+        width: 210px;
+
+        .circle {
+          align-items: center;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          margin-bottom: 5px;
+
+          span {
+            font-family: $NunitoRegular;
+            font-size: 42px;
+            font-weight: 600;
+          }
+        }
+
+        span {
+          font-family: $NunitoRegular;
+          font-size: 18px;
+          font-weight: 600;
+        }
+      }
 
       .cocktail {
         display: flex;
