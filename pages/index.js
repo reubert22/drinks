@@ -24,28 +24,39 @@ export default function Home() {
           <span className={styles.second_title}>Information</span>
         </div>
         <div className={styles.container_filters}>
-          <button onClick={() => setIsAlcoholic(true)} disabled={isAlcoholic}>
+          <button
+            className={`${styles.btn} ${isAlcoholic ? styles.active : ""}`}
+            onClick={() => setIsAlcoholic(true)}
+          >
             Alcoholic
           </button>
-          <button onClick={() => setIsAlcoholic(false)} disabled={!isAlcoholic}>
+          <button
+            className={`${styles.btn} ${!isAlcoholic ? styles.active : ""}`}
+            onClick={() => setIsAlcoholic(false)}
+          >
             Non Alcoholic
           </button>
         </div>
       </div>
       <div className={styles.container_cocktail}>
-        {cocktails.map((cocktail) => (
-          <div key={`cocktail-${cocktail.idDrink}`} className={styles.cocktail}>
-            <img
-              src={cocktail.strDrinkThumb}
-              alt={cocktail.strDrink}
-              width="120"
-              height="120"
-            />
+        <div className={styles.flex}>
+          {cocktails.map((cocktail) => (
             <Link href={`/cocktail/${cocktail.idDrink}/details`}>
-              <a>Name: {cocktail.strDrink}</a>
+              <div className={styles.cocktail}>
+                <div className={styles.container_img}>
+                  <img
+                    className={styles.img}
+                    src={cocktail.strDrinkThumb}
+                    alt={cocktail.strDrink}
+                    width="120"
+                    height="120"
+                  />
+                </div>
+                <span className={styles.name}>{cocktail.strDrink}</span>
+              </div>
             </Link>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
